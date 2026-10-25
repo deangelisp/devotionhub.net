@@ -24,7 +24,7 @@ class VerseShortDescription
                                 - Return only the short analisys of the verse. \n
                                 - The analysis should be from 200 to 300 characters long., \n
                                 - Use a tone with passion and reverence for the Bible., \n
-                                - Only use the Bible NIV version to get the verses.\n
+                                - Never name a Bible translation or version (such as NIV, ESV or KJV) in the analysis.\n
                                 - The analysis should be original and unique, offering a fresh perspective on the text., \n
                                 - The analysis is pro bible and should not contain any negative or offensive content., \n
 

@@ -43,7 +43,8 @@ function handle_newsletter_subscription()
 
     }
 }
-add_action('init', 'handle_newsletter_subscription');
+// The email course moved to the app (app.devotionhub.net): the site takes no new subscriptions.
+// add_action('init', 'handle_newsletter_subscription');
 
 function check_if_user_is_subscribed($user_id, $course_id)
 {
@@ -240,11 +241,10 @@ function schedule_daily_emails()
         }
     }
 }
-add_action('hourly_email_check', 'schedule_daily_emails');
-
-// Schedule the cron event if not already scheduled
-if (! wp_next_scheduled('hourly_email_check')) {
-    wp_schedule_event(time(), 'hourly', 'hourly_email_check');
+// The email course moved to the app, so the site no longer sends course emails:
+// the hourly check is unhooked and its scheduled event removed.
+if (wp_next_scheduled('hourly_email_check')) {
+    wp_clear_scheduled_hook('hourly_email_check');
 }
 function should_send_email($user_id, $course_id, $next_email_date, $timezone)
 {
