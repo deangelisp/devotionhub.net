@@ -1,0 +1,11 @@
+// Photoswipe
+@import 'photoswipe/dist/photoswipe.css';
+
+.pswp img {
+	object-fit: scale-down;
+}
+
+.pswp__bg {
+	opacity: 1 !important;
+	background-color: #5e5e5e;
+}

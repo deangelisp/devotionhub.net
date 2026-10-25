@@ -1,0 +1,14 @@
+.logo-cloud {
+	overflow-x: scroll;
+	scrollbar-width: none;
+	white-space: nowrap;
+	width: 100vw;
+	background-color: #fff;
+
+	&-item-image {
+		max-width: 200px;
+		max-height: 100px;
+		width: auto;
+		height: auto;
+	}
+}

@@ -1,0 +1,41 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentyfive/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+auth.json
+
+# WP-CLI
+wp-cli.local.yml
+
+# Local notes
+/docs/
+
+# Translations
+# Only WordPress core's en_NZ files that differ from US English are kept: the .l10n.php files, plus the script JSON
+# files with NZ spelling. After a WordPress update, run `lando wp language core update`, then delete the JSON files
+# that match US English before committing (the snippet is in docs/template.md).
+web/app/languages/plugins/
+web/app/languages/themes/
+web/app/languages/admin-network-*
+web/app/languages/*.po
+web/app/languages/*.mo

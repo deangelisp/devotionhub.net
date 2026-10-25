@@ -1,0 +1,8 @@
+.block-full-screen-header {
+	min-height: 100svh;
+
+	&#block-pos-0 {
+		// --total-header-height - 100svh
+		min-height: calc(100svh - var(--total-header-height));
+	}
+}

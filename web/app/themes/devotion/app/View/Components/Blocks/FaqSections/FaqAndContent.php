@@ -1,0 +1,43 @@
+<?php
+
+namespace App\View\Components\blocks\FaqSections;
+
+use Illuminate\View\Component;
+
+class FaqAndContent extends Component
+{
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public function __construct(
+        $id = false,
+        $block = false
+    ) {
+        $this->id = $id;
+
+        $this->uppertitle = $block['uppertitle'];
+        $this->title = $block['title'];
+        $this->content = $block['content'];
+        $this->faq_list = $block['faq_list'];
+        $this->list_positioning = $block['list_positioning'];
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
+     */
+    public function render()
+    {
+        return view('components.blocks.faq-sections.faq-and-content', [
+            'id' => $this->id,
+            'uppertitle' => $this->uppertitle,
+            'title' => $this->title,
+            'content' => $this->content,
+            'faqList' => $this->faq_list,
+            'listPositioning' => $this->list_positioning,
+        ]);
+    }
+}

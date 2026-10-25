@@ -1,0 +1,176 @@
+.wp-admin .acf-fields {
+	.field-horizontal {
+		display: flex;
+		min-height: 0;
+		align-items: center;
+
+		.acf-label {
+			flex-shrink: 0;
+			margin: 0 10px 0 0;
+
+			label {
+				margin: 0;
+			}
+		}
+
+		.acf-input {
+			width: 100%;
+
+			input[type='number'] {
+				width: 100px;
+			}
+		}
+	}
+
+	.breakline {
+		padding: 0;
+		min-height: 0 !important;
+		height: 0;
+		border: none;
+	}
+
+	.max-w-2,
+	.max-w-5 {
+		.acf-image-uploader .image-wrap img {
+			max-width: 5rem;
+			aspect-ratio: 1/1;
+			object-fit: contain;
+		}
+	}
+	.max-w-2 .acf-image-uploader .image-wrap img {
+		max-width: 2rem;
+	}
+
+	.acf-breakline {
+		padding: 0;
+		border: none;
+
+		* {
+			display: none;
+		}
+	}
+
+	.acf-groupping-top {
+		padding-bottom: 0;
+	}
+
+	.acf-groupping-bottom {
+		padding-top: 8px;
+		border-top-width: 0;
+	}
+
+	.acf-fc-layout-preview {
+		position: absolute;
+		display: flex;
+		bottom: 4px;
+		left: 39px;
+		align-items: flex-end;
+		gap: 6px;
+
+		&-thumb {
+			width: 64px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		&.category-archiveposts .acf-fc-layout-preview-thumb {
+			border: 1px solid #b18a22;
+		}
+
+		&-title {
+			padding-bottom: 5px;
+		}
+	}
+
+	// Call To Action Shortcode
+	.acf-field-call-to-action-settings-call-to-action-settings-shortcode-message
+		.acf-label {
+		margin-bottom: 0;
+	}
+
+	.acf-copy-container {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 0;
+
+		.acf-copy-from {
+			background: #f4f4f4;
+			padding: 5px 10px;
+		}
+	}
+
+	// Anchor Block
+	.acf-field-page-builder-page-builder-blocks-anchor-anchor-link-message {
+		max-width: 680px;
+	}
+	.anchor-link-url {
+		margin: 0;
+	}
+	.anchor-link-instructions {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		p {
+			margin: 0;
+		}
+
+		&-feedback {
+			display: none;
+			text-align: center;
+			margin: 0;
+			position: absolute;
+			top: -30px;
+			left: 0;
+			width: 100%;
+
+			&.show {
+				display: block;
+			}
+		}
+
+		&-description {
+			color: #667085;
+		}
+
+		.dashicons {
+			line-height: 30px;
+		}
+	}
+}
+
+// Flexible Content search
+.acf-fc-popup {
+	ul li a {
+		display: flex;
+		align-items: center;
+		.dashicons-star-filled {
+			width: auto;
+			height: auto;
+			margin-right: 6px;
+			font-size: 13px;
+		}
+	}
+
+	.acf-fc-layouts-search {
+		display: flex;
+		flex-direction: column-reverse;
+		&-field {
+			background-color: #ffffff1a;
+			border: 0;
+			border-radius: 0.25rem;
+			color: #fff;
+			inline-size: calc(100% - 20px);
+			margin-block: 5px;
+			margin-inline: 10px;
+			outline: 0;
+			padding-block: 0.25rem;
+			padding-inline: 0.5rem;
+		}
+
+		&-noresults {
+			padding-block: 5px;
+			padding-inline: 10px;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.product .price {
+	font-size: 1.25rem;
+	line-height: normal;
+	font-family: $font-title;
+
+	del {
+		margin-right: 4px;
+		font-size: 0.8em;
+		color: $medium-dark-tone;
+	}
+
+	ins {
+		font-weight: 600;
+		color: $primary;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,135 @@
+/*
+ * Tags
+ */
+
+body#tinymce.wp-editor,
+body {
+	font-family: $font-family;
+	font-size: 16px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+a {
+	transition: all;
+	transition-duration: 0.3s;
+}
+
+// titles
+
+.font-title {
+	font-family: $font-title;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.2em;
+}
+
+h1 {
+	font-size: 3.5rem;
+	line-height: 1em;
+	font-weight: 800;
+	font-family: $font-title;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+h2 {
+	font-size: 2.25rem;
+	font-weight: 700;
+	font-family: $font-title;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-family: $font-title;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+h6 {
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
+// Selected Text
+.text-selected,
+::selection {
+	color: #fff;
+	background: $primary;
+}
+
+/*
+ * Classes
+ */
+
+.container {
+	padding-left: 30px;
+	padding-right: 30px;
+
+	& .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (min-width: $lg) {
+	.container:not(.max-w-4xl):not(.max-w-2xl) {
+		max-width: 1340px;
+	}
+}
+
+@media (max-width: $lg) {
+	.container {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+
+	h1 {
+		font-size: 2.95rem;
+
+		br {
+			display: none;
+		}
+	}
+
+	h2 {
+		font-size: 2.75rem;
+	}
+}
+
+@media (max-width: $md) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2.25rem;
+	}
+
+	h3 {
+		font-size: 1.75rem;
+	}
+}
+
+@media (max-width: $sm) {
+	h1 {
+		font-size: 1.75rem;
+	}
+}

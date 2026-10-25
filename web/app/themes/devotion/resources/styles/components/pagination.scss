@@ -1,0 +1,28 @@
+.pagination {
+	.page-numbers {
+		display: flex;
+		width: 40px;
+		height: 40px;
+		align-items: center;
+		justify-content: center;
+		font-weight: 600;
+		color: $medium-dark-tone;
+		border: 1px solid $medium-dark-tone;
+		border-radius: $border-radius;
+
+		&:hover {
+			color: $primary;
+			border-color: $primary;
+
+			path {
+				fill: $primary;
+			}
+		}
+
+		&.current {
+			color: #fff;
+			border-color: $primary;
+			background: $primary;
+		}
+	}
+}

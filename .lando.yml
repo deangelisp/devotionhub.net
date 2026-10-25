@@ -1,0 +1,35 @@
+name: devotionhub-website
+recipe: wordpress
+
+config:
+  webroot: web
+  php: "8.4"
+  composer_version: "2.7.6"
+
+env_file:
+  - .env
+
+services:
+  node:
+    type: node:20
+
+  myservice:
+    type: phpmyadmin:5.2
+
+  appserver:
+    build:
+      - composer install
+
+database:
+  type: mysql:8.0
+  port: 3306
+  creds:
+    user: wordpress
+    password: wordpress
+    database: wordpress
+    host: database
+
+tooling:
+  npm:
+    service: node
+    cmd: npm

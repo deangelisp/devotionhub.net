@@ -1,0 +1,170 @@
+html.no-scroll {
+	position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+}
+
+// Spacing between Blocks
+.section-page {
+	margin-bottom: 120px;
+}
+
+// Font Size
+.text-2xs {
+	font-size: 10px;
+}
+
+// Font Colors
+$colors: (
+	primary: $primary,
+	secondary: $secondary,
+	accent: $accent,
+	dark: $dark,
+	//
+	light-tone: $light-tone,
+	medium-light-tone: $medium-light-tone,
+	medium-tone: $medium-tone,
+	medium-dark-tone: $medium-dark-tone,
+	dark-tone: $dark-tone,
+);
+
+@each $name, $color in $colors {
+	.text-#{$name} {
+		color: $color;
+	}
+
+	.hover {
+		&\:text-#{$name} {
+			&:hover {
+				color: $color;
+			}
+		}
+	}
+}
+
+// Background Colors
+@each $name, $color in $colors {
+	.bg-#{$name} {
+		background-color: $color;
+	}
+}
+
+// Borders
+@each $name, $color in $colors {
+	.border-#{$name} {
+		border-color: $color;
+	}
+}
+
+//Covers
+.full-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+a.full-cover {
+	font-size: 0;
+	transition: none !important;
+}
+
+img.full-cover {
+	object-fit: cover;
+}
+
+.absolute-full-cover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// Thumbnail frame
+.thumbnail-styled,
+.thumbnail-frame {
+	overflow: hidden;
+
+	.thumbnail {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:not(.object-contain):not(.object-scale-down) {
+			object-fit: cover;
+		}
+	}
+
+	&:not(.absolute) {
+		position: relative;
+	}
+}
+
+.vignette {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease;
+	background: radial-gradient(
+		circle,
+		rgba(0, 0, 0, 0) 54%,
+		rgba(0, 0, 0, 0.66) 100%
+	);
+	pointer-events: none; /* To ensure that the vignette doesn't interfere with any interactivity */
+}
+
+// Image
+// .thumbnail-styled {
+// 	border-radius: $border-radius;
+// 	box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0),
+// 		0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
+// 	//     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+// 	// border: 1px solid #eaecf1;
+// }
+
+/* ------------------------------
+   Reusable Styles
+   ------------------------------ */
+
+.radius {
+	border-radius: $border-radius;
+}
+
+.shadow {
+	box-shadow: $box-shadow;
+}
+
+.link-on-hover:hover {
+	color: $link;
+}
+
+a.link-on-hover:hover {
+	text-decoration: underline;
+}
+
+// Styling Container
+.container-text-white {
+	color: white;
+
+	.btn--secondary {
+		color: white;
+		border-color: white;
+	}
+}
+
+// Top Sticky when header is fixed
+.top-sticky {
+	top: 90px;
+}
+
+@media (max-width: $md) {
+	.section-page {
+		margin-bottom: 60px;
+	}
+}

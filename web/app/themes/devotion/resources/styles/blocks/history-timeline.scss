@@ -1,0 +1,31 @@
+.block-history-timeline {
+	&-bar {
+		width: 3px;
+		margin-left: 6px;
+
+		&-line {
+			width: 3px;
+			background-color: $medium-light-tone;
+		}
+
+		&-progress {
+			position: sticky;
+			top: 0;
+			width: 3px;
+			height: 50vh;
+			background-color: $primary;
+		}
+	}
+
+	&-bullet {
+		top: 10px;
+		left: -49px;
+		box-shadow: 0 0 0 8px #fff;
+	}
+}
+
+@media (max-width: $md) {
+	.block-history-timeline-bullet {
+		left: -30px;
+	}
+}

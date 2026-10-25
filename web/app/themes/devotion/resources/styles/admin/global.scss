@@ -1,0 +1,36 @@
+.lsw-wrap {
+	margin: 10px 20px 0 2px;
+
+	* {
+		margin: 0;
+		padding: 0;
+		outline: none;
+		font-size: 14px;
+		box-sizing: border-box;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 8px 16px;
+		border: none;
+		background-color: #4d1254;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		border-radius: 4px;
+		transition: background-color 0.3s ease;
+	}
+
+	.btn:hover {
+		background-color: #751280;
+	}
+
+	.mb-4 {
+		margin-bottom: 1rem;
+	}
+}
+
+// .collection-settings.gallery-settings .setting:first-of-type {
+// 	display: none !important;
+// }

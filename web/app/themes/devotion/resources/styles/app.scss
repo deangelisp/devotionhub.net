@@ -1,0 +1,34 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// Common
+@import 'common/variables.scss';
+@import 'common/utilities.scss';
+@import 'common/base.scss';
+@import 'common/form.scss';
+@import 'common/editor.scss';
+@import 'common/modal.scss';
+
+// Blocks
+@import 'blocks/history-timeline.scss';
+@import 'blocks/general.scss';
+
+// Components
+@import 'components/accordion-list.scss';
+@import 'components/button.scss';
+@import 'components/pagination.scss';
+@import 'components/slide.scss';
+@import 'components/logo-cloud.scss';
+@import 'components/header-sections.scss';
+@import 'components/gallery-horizontal-scroll.scss';
+@import 'components/tabber.scss';
+
+// Sections
+@import 'sections/header.scss';
+@import 'sections/footer.scss';
+@import 'sections/chapter.scss';
+
+// Woocommerce
+@import 'woocommerce/base.scss';
+@import 'woocommerce/single-product.scss';

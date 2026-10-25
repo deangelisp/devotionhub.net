@@ -1,0 +1,26 @@
+# robots.txt for DevotionHub.net
+
+# Allow all search engines
+User-agent: *
+
+# Disallow crawling of sensitive or non-essential sections
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-json/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+
+# Allow WordPress content but restrict some query strings
+Disallow: /*?s=
+Disallow: /*?replytocom
+
+# Allow all other areas
+Allow: /
+
+# Specify the location of your sitemap
+Sitemap: https://devotionhub.net/sitemap.xml

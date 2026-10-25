@@ -1,0 +1,165 @@
+.forminator-button,
+.btn {
+	display: inline-flex;
+	padding: 0.75rem 1.5rem;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	transition: all 0.2s ease-in-out;
+	background-color: $primary;
+
+	&:hover {
+		background-color: $accent;
+	}
+
+	&.small {
+		font-size: 14px;
+		padding: 0.5rem 1rem;
+	}
+
+	&:not(.rounded-md) {
+		border-radius: $border-radius;
+	}
+}
+
+.btn--secondary {
+	@extend .btn;
+
+	color: $primary;
+	border: 1px solid $primary;
+	background-color: transparent;
+
+	&:hover {
+		color: #fff;
+		border-color: $accent;
+	}
+}
+
+.btn--tertiary {
+	@extend .btn;
+
+	color: $text;
+	border: none;
+	background-color: transparent;
+
+	&:hover {
+		color: $primary;
+		background-color: transparent;
+	}
+}
+
+.btn--highlight {
+	@extend .btn;
+
+	color: #fff;
+	background-color: $highlight;
+
+	&:hover {
+		background-color: $secondary;
+	}
+}
+
+// Links
+a:not(.btn):not(.btn--secondary) {
+	&.link--high-contrast {
+		color: $accent;
+		text-decoration: underline;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	&.link--low-contrast {
+		color: $dark-tone;
+		text-decoration: underline;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+// Alerts
+.btn-alert {
+	@extend .btn;
+
+	color: #fff;
+	background: #1e429f;
+
+	&.danger {
+		background: #9b1c1c;
+	}
+
+	&.success {
+		background: #1e9f4f;
+	}
+
+	&.warning {
+		background: #723b13;
+	}
+
+	&:hover {
+		background: #771d1d;
+
+		&.danger {
+			background: #014737;
+		}
+		&.success {
+			background: #014737;
+		}
+
+		&.warning {
+			background: #633112;
+		}
+	}
+}
+
+.btn-alert--secondary {
+	@extend .btn-alert;
+
+	color: #1e429f;
+	border: 1px solid #1e429f;
+	background: transparent;
+
+	&.danger {
+		color: #9b1c1c;
+		border-color: #9b1c1c;
+		background: transparent;
+	}
+
+	&.success {
+		color: #1e9f4f;
+		border-color: #1e9f4f;
+		background: transparent;
+	}
+
+	&.warning {
+		color: #723b13;
+		border-color: #723b13;
+		background: transparent;
+	}
+
+	&:hover {
+		color: #fff;
+		border-color: #233876;
+
+		&.danger {
+			color: #fff;
+			border-color: #014737;
+		}
+
+		&.success {
+			color: #fff;
+			border-color: #014737;
+		}
+
+		&.warning {
+			color: #fff;
+			border-color: #633112;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+// Accordion
+.accordion-container {
+	border-bottom: 1px solid $dark-tone;
+
+	.accordion-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.15s ease-out;
+	}
+
+	.accordion-heading.active {
+		.accordion-icon {
+			transform: rotate(0);
+		}
+	}
+
+	.accordion-heading {
+		border-top: 1px solid $dark-tone;
+	}
+}
