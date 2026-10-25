@@ -4,7 +4,7 @@ const config = {
 	safelist: [
 		{
 			pattern: /grid|grid-cols|gap|items|col-span|aspect/,
-			variants: ['md', 'lg'],
+			variants: ['sm', 'md', 'lg'],
 		},
 		{
 			// add font size to safelist

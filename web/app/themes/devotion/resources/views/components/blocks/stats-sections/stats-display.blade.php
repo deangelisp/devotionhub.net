@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 {!! $gridClassName !!} gap-10 mt-12 md:mt-20">
+            <div class="grid grid-cols-2 {!! $gridClassName !!} gap-10 mt-12 md:mt-20">
                 @foreach ($stats as $stat)
                     <div>
                         <p class="font-bold">

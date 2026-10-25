@@ -7,6 +7,10 @@ use WP_Query;
 
 class App extends Composer
 {
+    // The 90-Day Journey landing page, and sign-up in the course app.
+    public const JOURNEY_URL = '/bible-study/90-day-journey-through-the-bible-from-genesis-to-revelation/';
+    public const APP_REGISTER_URL = 'https://app.devotionhub.net/register';
+
     protected static $views = [
         'layouts.app',
         'sections.header',
@@ -70,7 +74,27 @@ class App extends Composer
 
     private function headerCTA()
     {
-        return get_field('settings_header_cta', 'option');
+        $cta = get_field('settings_header_cta', 'option');
+
+        // On the page it links to, send people on to sign up rather than reloading the page.
+        if (isset($cta['url']) && self::isCurrentPage($cta['url'])) {
+            $cta = ['url' => self::APP_REGISTER_URL, 'title' => 'Join the 90-Day Journey', 'target' => ''];
+        }
+
+        return $cta;
+    }
+
+    /** The journey link for the footer: the landing page, or sign-up when already on it. */
+    public static function journeyLink()
+    {
+        return self::isCurrentPage(self::JOURNEY_URL) ? self::APP_REGISTER_URL : self::JOURNEY_URL;
+    }
+
+    public static function isCurrentPage($url)
+    {
+        $path = fn ($u) => untrailingslashit((string) parse_url($u, PHP_URL_PATH));
+
+        return is_singular() && $path($url) === $path(get_permalink(get_queried_object_id()));
     }
 
     public static function postsLink()

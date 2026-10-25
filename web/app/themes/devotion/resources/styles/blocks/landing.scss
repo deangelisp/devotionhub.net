@@ -1,0 +1,155 @@
+// Course landing page blocks: Course Hero and Card Grid.
+
+.block-course-hero {
+	background: #1c1e20;
+
+	&__glow {
+		position: absolute;
+		top: -30%;
+		right: -15%;
+		width: 70%;
+		aspect-ratio: 1;
+		background: radial-gradient(circle, rgba($highlight, 0.35) 0%, rgba($highlight, 0) 65%);
+		pointer-events: none;
+	}
+
+	&__eyebrow {
+		display: inline-flex;
+		align-items: flex-start;
+		gap: 0.6rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: #7dd3fc;
+
+		&::before {
+			content: '';
+			flex-shrink: 0;
+			width: 0.5rem;
+			height: 0.5rem;
+			margin-top: 0.4em;
+			border-radius: 999px;
+			background: $highlight;
+			box-shadow: 0 0 0 4px rgba($highlight, 0.25);
+		}
+	}
+
+	// Nested so they outrank .btn, which components/button.scss defines later.
+	.block-course-hero__join,
+	.block-course-hero__login {
+		padding: 1rem 1.75rem;
+		font-size: 1.0625rem;
+		font-weight: 600;
+	}
+
+	.block-course-hero__join {
+		box-shadow: 0 12px 30px -10px rgba($highlight, 0.8);
+
+		&:hover {
+			transform: translateY(-1px);
+		}
+	}
+
+	.block-course-hero__login {
+		color: #fff;
+		background-color: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.08);
+			border-color: #fff;
+		}
+	}
+
+	&__browser {
+		overflow: hidden;
+		border-radius: 0.75rem;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		background: #2a2c2f;
+		box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7);
+	}
+
+	&__browser-bar {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.65rem 0.9rem;
+
+		span {
+			width: 0.6rem;
+			height: 0.6rem;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		p {
+			flex: 1;
+			max-width: 16rem;
+			margin: 0 auto;
+			padding: 0.2rem 0.8rem;
+			border-radius: 999px;
+			background: rgba(0, 0, 0, 0.3);
+			color: rgba(255, 255, 255, 0.55);
+			font-size: 0.75rem;
+			text-align: center;
+		}
+	}
+
+	&__phone {
+		position: absolute;
+		left: -1.5rem;
+		bottom: -2.5rem;
+		width: 26%;
+		overflow: hidden;
+		border-radius: 1.75rem;
+		border: 6px solid #0b0b0c;
+		background: #0b0b0c;
+		box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+
+		@media (max-width: $lg) {
+			left: 0.5rem;
+			bottom: 0;
+			width: 30%;
+			border-width: 4px;
+			border-radius: 1.25rem;
+		}
+	}
+}
+
+.block-card-grid {
+	&--tinted {
+		padding: 6rem 0;
+		background: $light-tone;
+	}
+
+	&__card {
+		height: 100%;
+		padding: 2rem;
+		border: 1px solid $medium-light-tone;
+		border-radius: $border-radius;
+		background: #fff;
+	}
+
+	&__number {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-bottom: 1.25rem;
+		border-radius: 999px;
+		background: $highlight;
+		color: #fff;
+		font-weight: 700;
+	}
+
+	&__label {
+		display: block;
+		color: $highlight;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+}

@@ -27,6 +27,7 @@ class ButtonsRepeater
                     'primary' => 'Primary',
                     'secondary' => 'Secondary',
                     'tertiary' => 'Tertiary',
+                    'highlight' => 'Highlight',
                 ],
                 'wrapper' => [
                     'width' => '50',
